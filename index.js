@@ -1,6 +1,9 @@
+function calculate() {
+  const input = document.querySelector('#inchesInput').value;
+  const inches = parseFloat(input);
+  const resultElement = document.getElementById('result');
 
-let number = 1;
-do {
-  console.log(number);
-  number++;
-} while (number <= 10);
+  const cm = inches * 2.54; 
+  resultElement.textContent = isNaN(inches) ? "Please enter a valid number."
+    : `${inches} inches is ${cm.toFixed(2)} cm.`;
+}
